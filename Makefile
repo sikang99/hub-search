@@ -39,7 +39,7 @@ clean:
 start:
 	ssh -T git@github.com
 	git init
-	git pull https://github.com/sikang99/hub-search master
+	#git pull https://github.com/sikang99/hub-search master
 
 git g:
 	git status

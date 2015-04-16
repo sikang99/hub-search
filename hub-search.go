@@ -143,6 +143,7 @@ func main() {
 			continue
 		}
 		if num > 0 && i >= num {
+			// filter top number of items
 			break
 		}
 
