@@ -25,12 +25,6 @@ test t:
 	./$(PROGRAM) tugboat --lang=go --down --list=1
 	./$(PROGRAM) --lang=go webrtc server --down
 
-test t:
-	./$(PROGRAM) tugboat
-	./$(PROGRAM) tugboat --lang=go
-	./$(PROGRAM) tugboat --lang=go --sort=stars
-	./$(PROGRAM) tugboat --lang=go --sort=stars --order=asc --text --down
-
 rebuild:
 	rm -f ./$(PROGRAM)
 	go build $(PROGRAM).go
