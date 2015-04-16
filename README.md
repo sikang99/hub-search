@@ -53,6 +53,13 @@ To get (download) the repos matched
 $ hub-search --lang=go restful framework -d
 ```
 
+To display the list in plain text without color code, add --text
+```
+$ hub-search --lang=go restful framework -d --text
+```
+
+
+
 ### Reference
 
 - [tj/go-search](http://github.com/tj-go-search)
