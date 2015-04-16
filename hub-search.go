@@ -7,10 +7,7 @@ import (
 	"net/url"
 	"os"
 	"os/exec"
-<<<<<<< HEAD
 	"strconv"
-=======
->>>>>>> 50e667568d9989c0b3f63ae4e3753011e117a13b
 	"strings"
 
 	"github.com/segmentio/go-log"
@@ -57,15 +54,10 @@ type GitResponse struct {
 var Version = "0.1.4"
 
 const Usage = `
-<<<<<<< HEAD
   Hub-Search for searching respositories in https://github.com
 
   Usage:
     hub-search <query>... [--lang=<type>][--sort=<method>][--order=<style>][--score=<sn>][--list=<ln>][--down][--text]
-=======
-  Usage:
-    hub-search <query>... [--lang=<type>] [--sort=<method>] [--order=<type>] [--text] [--down]
->>>>>>> 50e667568d9989c0b3f63ae4e3753011e117a13b
     hub-search -d | --down
     hub-search -t | --text
     hub-search -h | --help
@@ -74,17 +66,11 @@ const Usage = `
   Options:
     --lang=<type>    implemenation language, default:ALL
     --sort=<method>  sort field, default: best match [stars|forks|updated]
-<<<<<<< HEAD
     --order=<style>  style of sort order, default: desc [asc|desc]
     --score=<sn>     show items more than the score <sn>
     --list=<ln>      list top items below the number <ln>
     -d, --down       download packages searched
     -t, --text       display plain text without escape color characters
-=======
-    --order=<type>   the sort order, default: desc [asc|desc]
-    -d, --down       download packages searched
-    -t, --text       normal text without esc chars
->>>>>>> 50e667568d9989c0b3f63ae4e3753011e117a13b
     -h, --help       output help information
     -v, --version    output version
 
@@ -111,7 +97,6 @@ func main() {
 		req = req + "&order=" + order
 	}
 
-<<<<<<< HEAD
 	var score float64
 	if args["--score"] != nil {
 		score, _ = strconv.ParseFloat(args["--score"].(string), 64)
@@ -121,8 +106,6 @@ func main() {
 		num, _ = strconv.Atoi(args["--list"].(string))
 	}
 
-=======
->>>>>>> 50e667568d9989c0b3f63ae4e3753011e117a13b
 	var text bool
 	if args["--text"] != nil {
 		text = args["--text"].(bool)
@@ -153,7 +136,6 @@ func main() {
 		fmt.Printf("  no package for '%s' in github.com.\n\n", query)
 		return
 	}
-<<<<<<< HEAD
 
 	for i, item := range body.Items {
 		if score > 0 && score > item.Score {
@@ -169,29 +151,15 @@ func main() {
 			fmt.Printf("  %s\n", item.FullName)
 			fmt.Printf("  %s\n", description(item.Description))
 			fmt.Printf("  %s  %s  %d  %.2f\n", item.UpdatedAt, language(item.Language), item.Size, item.Score)
-=======
-	for _, item := range body.Items {
-		if text {
-			fmt.Printf("  %s\n", item.FullName)
-			fmt.Printf("  %s\n", description(item.Description))
-			fmt.Printf("  %s  %s  %d\n", item.UpdatedAt, language(item.Language), item.Size)
->>>>>>> 50e667568d9989c0b3f63ae4e3753011e117a13b
 			fmt.Printf("  %s\n\n", item.HTMLURL)
 		} else {
 			fmt.Printf("  \033[32;1m%s\033[m\n", item.FullName) // 32:green, 33:yellow, 36:cyan
 			fmt.Printf("  %s\n", description(item.Description))
-<<<<<<< HEAD
 			fmt.Printf("  %s  \033[33;1m%s\033[m  %d  %.2f\n", item.UpdatedAt, language(item.Language), item.Size, item.Score)
 			fmt.Printf("  %s\n\n", item.HTMLURL)
 		}
 
 		// download required
-=======
-			fmt.Printf("  %s  \033[33;1m%s\033[m  %d\n", item.UpdatedAt, language(item.Language), item.Size)
-			fmt.Printf("  %s\n\n", item.HTMLURL)
-		}
-
->>>>>>> 50e667568d9989c0b3f63ae4e3753011e117a13b
 		if down {
 			download(item.FullName)
 		}
@@ -215,10 +183,7 @@ func language(s string) string {
 	return s
 }
 
-<<<<<<< HEAD
 // strip down github domain string
-=======
->>>>>>> 50e667568d9989c0b3f63ae4e3753011e117a13b
 func strip(s string) string {
 	return strings.Replace(s, "github.com/", "", 1)
 }
@@ -227,7 +192,6 @@ func strip(s string) string {
 func download(s string) error {
 	pkg := "github.com/" + s
 	fmt.Fprintf(os.Stderr, "> downloading (\033[32;1m%s\033[m) ...\n", s)
-<<<<<<< HEAD
 	r, err := exec.Command("go", "get", "-u", "-v", pkg).CombinedOutput()
 	/*
 		if err != nil {
@@ -235,9 +199,6 @@ func download(s string) error {
 			//log.Check(err)
 		}
 	*/
-=======
-	r, err := exec.Command("go", "get", "-v", pkg).CombinedOutput()
->>>>>>> 50e667568d9989c0b3f63ae4e3753011e117a13b
 	fmt.Fprintf(os.Stderr, "%s\n", r)
 	return err
 }
