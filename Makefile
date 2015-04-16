@@ -37,7 +37,7 @@ git g:
 	git add *
 	git commit -m "fix or modified"	
 	git push -u origin master
-	git log
+	git log --oneline -5
 
 make m:
 	$(EDITOR) Makefile
