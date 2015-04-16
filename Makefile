@@ -37,6 +37,7 @@ clean:
 	rm -f ./$(PROGRAM)
 
 start:
+	ssh -T git@github.com
 	git init
 	git pull https://github.com/sikang99/hub-search master
 
