@@ -35,8 +35,9 @@ clean:
 
 git g:
 	git add *
-	git commit	
+	git commit -m "fix or modified"	
 	git push -u origin master
+	git log
 
 make m:
 	$(EDITOR) Makefile
