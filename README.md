@@ -1,6 +1,6 @@
 ## Hub-Search
 
-search repositories matched with strings in github.com
+search repositories matched with the given words and options in github.com
 
 ### Installation
 
