@@ -39,13 +39,12 @@ clean:
 start:
 	git init
 	git pull https://github.com/sikang99/hub-search master
-	#git remote set-url origin https://github.com/sikang99/$(PROGRAM).git
 
 git g:
 	git status
 	git add *
 	git commit -m "add some more options"
-	git push -u origin master
+	git push -u https://github.com/sikang99/hub-search master
 	git log --oneline -5
 
 make m:
