@@ -31,7 +31,7 @@ $ hub-search -h
     -v, --version    output version
 ```
 
-If you search repos related with "webrtc server",
+If you search repos related with "webrtc server" and written in Go,
 ```
 $ hub-search --lang=go webrtc server
 ```
