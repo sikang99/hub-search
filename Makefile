@@ -36,6 +36,7 @@ clean:
 git g:
 	git add *
 	git commit	
+	git push -u origin master
 
 make m:
 	$(EDITOR) Makefile
