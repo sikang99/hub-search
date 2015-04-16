@@ -56,7 +56,7 @@ $ hub-search --lang=go restful framework -d
 ### Reference
 
 - [tj/go-search](http://github.com/tj-go-search)
-- Github Developer API Search](https://developer.github.com/v3/search/)
+- [Github Developer API Search](https://developer.github.com/v3/search/)
 - [JSON-to-Go](http://mholt.github.io/json-to-go/)
 - [ANSI escape code](http://en.wikipedia.org/wiki/ANSI_escape_code)
 
