@@ -7,8 +7,9 @@ Search repositories matched with the given words and options in github.com
 
 ```
 $ go get github.com/skang99/hub-search
-
-or
+```
+optionally and
+```
 $ cd $GOPATH/sikang99/hub-search
 $ go install
 ```
