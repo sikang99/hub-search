@@ -37,7 +37,7 @@ $ hub-search -h
     -v, --version    output version
 ```
 
-To search repos matched the given words, and written in go
+To search repos matched with the given words, and written in go
 ```
 $ hub-search --lang=go restful framework
 ```
