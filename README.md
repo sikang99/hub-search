@@ -58,6 +58,7 @@ To display the list in plain text without color code, add --text
 $ hub-search --lang=go restful framework -d --text
 ```
 
+To use the utility simply, `alias gog="hub-search --lang=go"`
 
 
 ### Reference
