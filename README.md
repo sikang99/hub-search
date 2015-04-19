@@ -48,12 +48,12 @@ To list up top number of items, use `--list=<number>` option
 $ hub-search web --list=10
 ```
 
-To get (download) the repos matched
+To get (download) the repos matched, use `--down` option
 ```
 $ hub-search --lang=go restful framework -d
 ```
 
-To display the list in plain text without color code, add --text
+To display the list in plain text without color code, add `--text` option
 ```
 $ hub-search --lang=go restful framework -d --text
 ```
