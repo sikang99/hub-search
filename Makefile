@@ -45,7 +45,7 @@ git g:
 	git status
 	git add *
 	git commit -m "update Makefile"
-	git push -u https://sikang99@github.com/sikang99/hub-search master
+	git push -u https://sikang99@github.com/sikang99/$(PROGRAM) master
 	git log --oneline -5
 
 git2:
