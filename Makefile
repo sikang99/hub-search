@@ -38,17 +38,19 @@ clean:
 
 start:
 	ssh -T git@github.com
-	git init
 
 git g:
 	make clean
 	git status
-	git add *
-	git commit -m "update Makefile"
+	git add README.md Makefile $(PROGRAM).go
+	git commit -m "git test and update Makefile"
 	git push -u https://sikang99@github.com/sikang99/$(PROGRAM) master
 	git log --oneline -5
 
 git2:
+	git init
+	git add README.md Makefile $(PROGRAM).go
+	git commit -m "git test and update Makefile"
 	git remote add origin https://sikang99@github.com/sikang99/$(PROGRAM)
 	git push -u origin master
 
