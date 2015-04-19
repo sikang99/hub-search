@@ -36,29 +36,31 @@ install i:
 clean:
 	rm -f ./$(PROGRAM)
 
-start:
+make m:
+	$(EDITOR) Makefile
+
+# ---------------------------------------------------------------------------
+git-hub gh:
 	ssh -T git@github.com
 
-git g:
-	make clean
-	git status
+git-update gu:
 	git init
 	git add README.md Makefile $(PROGRAM).go
 	git commit -m "git test and update Makefile"
 	git push -u https://sikang99@github.com/sikang99/$(PROGRAM) master
+
+git-status gs:
+	git status
 	git log --oneline -5
 
-git2:
+git-origin go:
 	git init
 	git add README.md Makefile $(PROGRAM).go
 	git commit -m "git test and update Makefile"
 	git remote add origin https://sikang99@github.com/sikang99/$(PROGRAM)
 	git push -u origin master
 
-
-make m:
-	$(EDITOR) Makefile
-
+# ---------------------------------------------------------------------------
 usage:
 	@echo ""
 	@echo "Makefile for '$(PROGRAM)', by Stoney Kang, 2015/04/12"
