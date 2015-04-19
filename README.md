@@ -43,7 +43,7 @@ To search repos matched with the given words, and written in go
 $ hub-search --lang=go restful framework
 ```
 
-To list up top number of items
+To list up top number of items, use `--list=<number>` option
 ```
 $ hub-search web --list=10
 ```
