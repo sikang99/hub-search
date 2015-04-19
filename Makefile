@@ -39,14 +39,18 @@ clean:
 start:
 	ssh -T git@github.com
 	git init
-	#git pull https://github.com/sikang99/hub-search master
 
 git g:
 	git status
 	git add *
-	git commit -m "add some more options"
-	git push -u https://github.com/sikang99/hub-search master
+	git commit -m "update Makefile"
+	git push -u https://sikang99@github.com/sikang99/hub-search master
 	git log --oneline -5
+
+git2:
+	git remote add origin https://sikang99@github.com/sikang99/$(PROGRAM)
+	git push -u origin master
+
 
 make m:
 	$(EDITOR) Makefile
