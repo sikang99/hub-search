@@ -41,6 +41,7 @@ start:
 	git init
 
 git g:
+	make clean
 	git status
 	git add *
 	git commit -m "update Makefile"
