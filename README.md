@@ -6,7 +6,7 @@ Search repositories matched with the given words and options in github.com
 ## Installation
 
 ```
-$ go get github.com/sikang99/hub-search
+$ go get github.com/sikang99/hub-search/...
 ```
 optionally and
 ```
