@@ -44,7 +44,7 @@ git-hub gh:
 	ssh -T git@github.com
 
 git-update gu:
-	git add README.md Makefile $(PROGRAM).go
+	git add README.md Makefile $(PROGRAM).go vendor/
 	git commit -m "modify source to compile in go1.11"
 	git push
 
