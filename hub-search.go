@@ -3,6 +3,8 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+
+	"log"
 	"net/http"
 	"net/url"
 	"os"
@@ -10,7 +12,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/segmentio/go-log"
+	Log "github.com/segmentio/go-log"
 	"github.com/tj/docopt"
 )
 
@@ -79,7 +81,7 @@ const Usage = `
 func main() {
 	args, err := docopt.Parse(Usage, nil, true, Version, false)
 	//fmt.Println(args)
-	log.Check(err)
+	Log.Check(err)
 
 	query := strings.Join(args["<query>"].([]string), " ")
 	req := "https://api.github.com/search/repositories?q=" + url.QueryEscape(query)
@@ -128,7 +130,7 @@ func main() {
 	}
 
 	var body GitResponse
-	log.Check(json.NewDecoder(res.Body).Decode(&body))
+	Log.Check(json.NewDecoder(res.Body).Decode(&body))
 	//fmt.Println(body.Items)
 
 	println()

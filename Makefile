@@ -4,11 +4,14 @@ all: usage
 PROGRAM=hub-search
 EDITOR=vim
 
-edit e:
+edit-go eg:
 	$(EDITOR) $(PROGRAM).go
 
-readme md:
+edit-readme mr:
 	$(EDITOR) README.md
+
+edit-make em:
+	$(EDITOR) Makefile
 
 build b:
 	go build $(PROGRAM).go
@@ -35,9 +38,6 @@ install i:
 
 clean:
 	rm -f ./$(PROGRAM)
-
-make m:
-	$(EDITOR) Makefile
 
 # ---------------------------------------------------------------------------
 git-hub gh:
