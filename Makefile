@@ -44,10 +44,9 @@ git-hub gh:
 	ssh -T git@github.com
 
 git-update gu:
-	git init
 	git add README.md Makefile $(PROGRAM).go
-	git commit -m "git test and update Makefile"
-	git push -u https://sikang99@github.com/sikang99/$(PROGRAM) master
+	git commit -m "modify source to compile in go1.11"
+	git push
 
 git-status gs:
 	git status
