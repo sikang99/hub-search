@@ -43,21 +43,21 @@ clean:
 git-hub gh:
 	ssh -T git@github.com
 
+git-new gn:
+	echo "# hub-search" >> README.md
+	git init
+	git add README.md
+	git commit -m "first commit"
+	git remote add origin https://sikang99@github.com/sikang99/$(PROGRAM).git
+	git push -u origin master
+
 git-update gu:
-	git add README.md Makefile $(PROGRAM).go vendor/
-	git commit -m "modify source to compile in go1.11"
+	git add README.md Makefile *.go go.* vendor/
+	git commit -m "upload with /vendor"
 	git push
 
-git-status gs:
-	git status
-	git log --oneline -5
-
-git-origin go:
-	git init
-	git add README.md Makefile $(PROGRAM).go
-	git commit -m "git test and update Makefile"
-	git remote add origin https://sikang99@github.com/sikang99/$(PROGRAM)
-	git push -u origin master
+git-login gl:
+	git config credential.helper store
 
 # ---------------------------------------------------------------------------
 usage:

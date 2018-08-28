@@ -1,0 +1,4 @@
+github.com/segmentio/go-log v1.9.0 h1:1dhZF9aIsQG3sK2To2l41bWcipIqPa+mXMEvc0Yx9zk=
+github.com/segmentio/go-log v1.9.0/go.mod h1:OaWNxWOTRpA/fIXTfr2FmimINNi+0MyArbeI1FLjOkY=
+github.com/tj/docopt v1.0.0 h1:echGqiJYxqwI1PQAppd8PrBM2e6E4G46NQugrTpL/wU=
+github.com/tj/docopt v1.0.0/go.mod h1:UWdJekySvYOgmpTJtkPaWS4fvSKYba+U6+E2iKJCV/I=
