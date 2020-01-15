@@ -4,3 +4,5 @@ require (
 	github.com/segmentio/go-log v1.9.0
 	github.com/tj/docopt v1.0.0
 )
+
+go 1.13

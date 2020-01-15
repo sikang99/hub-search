@@ -53,7 +53,7 @@ git-new gn:
 
 git-update gu:
 	git add README.md Makefile *.go go.* vendor/
-	git commit -m "upload with /vendor"
+	git commit -m "remove /vendor"
 	git push
 
 git-login gl:
